@@ -1,0 +1,16 @@
+import numpy as np
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        x=np.unique(arr)
+        l=[]
+        for i in x:
+            y=arr.count(i)
+            l.append(y)
+        for j in range(len(l)):
+            for k in range(j+1,len(l)):
+                if l[j]==l[k]:
+                    return False
+                else:
+                    pass
+        else:
+            return True
