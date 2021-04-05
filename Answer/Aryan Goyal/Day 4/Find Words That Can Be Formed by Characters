@@ -1,0 +1,15 @@
+class Solution:
+    def countCharacters(self, words: List[str], chars: str) -> int:
+        ctr=0
+        for i in words:
+            x=True
+            x1=list(chars)
+            for j in i:
+                if j in x1:
+                    x1.remove(j)
+                else:
+                    x=False
+            if x==True:
+                print(i)
+                ctr+=len(i)
+        return ctr
