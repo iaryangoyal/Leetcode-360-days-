@@ -1,0 +1,11 @@
+import numpy as np
+class Solution:
+    def distributeCandies(self, candyType: List[int]) -> int:
+        x = np.array(candyType)
+        y=np.unique(x)
+        n=len(candyType)
+        x1=len(y)
+        if x1>=(n//2):
+            return(n//2)
+        else:
+            return(x1)
