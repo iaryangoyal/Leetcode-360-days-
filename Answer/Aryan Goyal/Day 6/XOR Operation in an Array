@@ -1,0 +1,13 @@
+class Solution:
+    def xorOperation(self, n: int, start: int) -> int:
+        l=[]
+        s1=0
+        if start%2==0:
+           for i in range(start,start+(n*2),2):
+                l.append(i)
+        else:
+            for i in range(start,start+(n*2),2):
+                l.append(i)
+        for i in l:
+            s1 = s1 ^ i
+        return s1
