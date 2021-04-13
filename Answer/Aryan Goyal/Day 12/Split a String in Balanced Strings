@@ -1,0 +1,11 @@
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        count_r, max_balanced = 0,0
+        for each in s:
+            if each=='R':
+                count_r+=1
+            else:
+                count_r-=1
+            if count_r==0:
+                max_balanced+=1
+        return max_balanced
